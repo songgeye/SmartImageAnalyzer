@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+header h1 {
+  text-align: center;
+}
+
+#drop-area {
+  border: 2px dashed #ccc;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+#drop-area.dragover {
+  border-color: #333;
+  background-color: #f8f8f8;
+}
+
+#keyword-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Example categories styles */
+.button-category {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: #fff;
+}
+
+.button-hotel { background-color: #1abc9c; }     /* 宿泊 */
+.button-food { background-color: #e67e22; }      /* 食べ物 */
+.button-landscape { background-color: #3498db; }  /* 風景 */
+.button-event { background-color: #9b59b6; }      /* イベント */
+.button-transport { background-color: #e74c3c; }  /* 乗物 */
+.button-person { background-color: #34495e; }     /* 人物 */
+.button-character { background-color: #f39c12; }  /* キャラクター */
+.button-art { background-color: #2ecc71; }        /* アート */
+.button-season { background-color: #8e44ad; }     /* 季節 */
+.button-region { background-color: #d35400; }     /* 地域 */
+.button-method { background-color: #27ae60; }     /* 撮影手法 */
+
+.button-category:hover {
+  opacity: 0.8;
+}
+
+.hidden {
+  display: none;
+}
