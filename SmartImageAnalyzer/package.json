@@ -1,0 +1,25 @@
+{
+  "name": "smartimageanalyzer",
+  "version": "1.0.0",
+  "description": "キーワード抽出システム",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/songgeye/SmartImageAnalyzer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/songgeye/SmartImageAnalyzer/issues"
+  },
+  "homepage": "https://github.com/songgeye/SmartImageAnalyzer#readme",
+  "jest": {
+    "testMatch": [
+      "**/__tests__/**/*.[jt]s?(x)",
+      "**/?(*.)+(spec|test).[tj]s?(x)"
+    ]
+  }
+}
