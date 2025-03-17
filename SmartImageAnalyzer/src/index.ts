@@ -3,8 +3,8 @@ import * as path from 'path';
 import dotenv from 'dotenv';
 import * as csvWriter from 'csv-writer';
 import { keywordList } from '../server'; // server.ts から keywordList をインポート
-import { analyzeImage } from './imageAnalyzer';
 import { analyzeImage } from './imageAnalysisModule'; // 画像解析モジュールをインポート
+import { analyzeAndSaveToCSV } from './imageAnalyzer';
 
 
 // 環境変数を読み込み
