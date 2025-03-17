@@ -4,7 +4,9 @@
   "description": "キーワード抽出システム",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc",
+    "start": "node dist/imageAnalyzer.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,7 @@
     "typescript": "^5.8.2"
   },
   "dependencies": {
-    "dotenv": "^16.4.7"
+    "dotenv": "^16.4.7",
+    "csv-writer": "^1.6.0"
   }
 }
