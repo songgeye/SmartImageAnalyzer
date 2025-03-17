@@ -2,7 +2,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import * as csvWriter from 'csv-writer';
 import { keywordList } from '../server'; // server.ts から keywordList をインポート
-import { analyzeImage } from './path/to/your/image/analysis/module'; // 画像解析モジュールをインポート
+import { analyzeImage } from './modules/imageAnalysisModule'; // 画像解析モジュールをインポート
 
 const imagePath = './src/images/your_image.jpg'; // 画像ファイルのパス
 const csvPath = './dist/result.csv'; // 出力するCSVファイルのパス
