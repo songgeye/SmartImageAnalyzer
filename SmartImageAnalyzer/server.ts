@@ -1,17 +1,17 @@
-// 他のインポートや定義の前に追加
-export const keywordList = ["example", "keywords", "here"];
-
 import express, { Request, Response } from "express";
 import multer from "multer";
 import path from "path";
 import Tesseract from "tesseract.js";
 
+export const keywordList = ["example", "keywords", "here"];
+
 // 必要なインポートや他のコード
 const app = express();
+const upload = multer({ dest: "uploads/" });
 const port = process.env.PORT || 3000;
 
 // ルートやミドルウェアの定義
-app.get('/', (req, res) => {
+app.get('/', (req: Request, res: Response) => {
   res.send('Hello World!');
 });
 
