@@ -23,10 +23,6 @@ app.get('/', (req: Request, res: Response) => {
   res.send('Hello World!');
 });
 
-// サーバーの起動
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
-});
 
 // ファイルアップロード用マルチのセットアップ
 const upload = multer({
@@ -71,6 +67,7 @@ app.post("/upload", upload.single("image"), async (req: Request, res: Response) 
 // フロントエンドファイルを public フォルダから提供
 app.use(express.static(path.join(__dirname, "../public")));
 
+// サーバーの起動
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
