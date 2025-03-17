@@ -5,7 +5,7 @@ import { keywordList } from '../server'; // server.ts から keywordList をイ�
 import { analyzeImage } from './modules/imageAnalysisModule'; // 画像解析モジュールをインポート
 
 const imagePath = path.join(__dirname, 'images', 'your_image.jpg'); // 画像ファイルのパス // 画像ファイルのパス
-const csvPath = './dist/result.csv'; // 出力するCSVファイルのパス
+const csvPath = path.join(__dirname, '..', 'dist', 'result.csv'); // 出力するCSVファイルのパス
 
 // 画像を解析する関数
 async function analyzeAndSaveToCSV() {
@@ -26,6 +26,7 @@ async function analyzeAndSaveToCSV() {
       { I2: analysisResult },
       ...keywordList.map(keyword => ({ I2: keyword }))
     ]); // 解析結果をI2列に書き込み
+    
     console.log('CSVファイルに結果を保存しました');
   } catch (error) {
     console.error('解析中にエラーが発生しました:', error);
