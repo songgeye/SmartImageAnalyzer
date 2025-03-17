@@ -1,17 +1,31 @@
+// 他のインポートや定義の前に追加
+export const keywordList = ["example", "keywords", "here"];
+
 import express, { Request, Response } from "express";
 import multer from "multer";
 import path from "path";
 import Tesseract from "tesseract.js";
 
+// 必要なインポートや他のコード
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Set up multer for file uploads
+// ルートやミドルウェアの定義
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
+// サーバーの起動
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
+
+// ファイルアップロード用マルチのセットアップ
 const upload = multer({
   dest: path.join(__dirname, "uploads/")
 });
 
-// Predefined keyword list
+// 定義済みキーワード一覧
 const keywordList: string[] = [
   "宿泊施設", "外観", "客室", "露天風呂", "大浴場", "間取り図", "見取り図",
   "食べ物", "料理",
