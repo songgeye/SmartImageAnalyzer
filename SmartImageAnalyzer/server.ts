@@ -23,12 +23,6 @@ app.get('/', (req: Request, res: Response) => {
   res.send('Hello World!');
 });
 
-
-// ファイルアップロード用マルチのセットアップ
-const upload = multer({
-  dest: path.join(__dirname, "uploads/")
-});
-
 app.post("/upload", upload.single("image"), async (req: Request, res: Response) => {
   try {
     if (!req.file) {
