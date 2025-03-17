@@ -3,7 +3,7 @@ import multer from "multer";
 import path from "path";
 import Tesseract from "tesseract.js";
 
-export const keywordList = ["example", "keywords", "here"];
+export const keywordList: string[] = ["example", "keywords", "here"];
 
 // 必要なインポートや他のコード
 const app = express();
