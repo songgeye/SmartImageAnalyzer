@@ -1,5 +1,7 @@
 import * as fs from 'fs';
+import * as path from 'path';
 import * as csvWriter from 'csv-writer';
+import { keywordList } from '../server'; // server.ts から keywordList をインポート
 import { analyzeImage } from './path/to/your/image/analysis/module'; // 画像解析モジュールをインポート
 
 const imagePath = './src/images/your_image.jpg'; // 画像ファイルのパス
@@ -20,7 +22,10 @@ async function analyzeAndSaveToCSV() {
       ],
     });
 
-    await writer.writeRecords([{ I2: analysisResult }]); // 解析結果をI2列に書き込み
+    await writer.writeRecords([
+      { I2: analysisResult },
+      ...keywordList.map(keyword => ({ I2: keyword }))
+    ]); // 解析結果をI2列に書き込み
     console.log('CSVファイルに結果を保存しました');
   } catch (error) {
     console.error('解析中にエラーが発生しました:', error);
