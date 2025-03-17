@@ -4,7 +4,7 @@ import * as csvWriter from 'csv-writer';
 import { keywordList } from '../server'; // server.ts から keywordList をインポート
 import { analyzeImage } from './modules/imageAnalysisModule'; // 画像解析モジュールをインポート
 
-const imagePath = './src/images/your_image.jpg'; // 画像ファイルのパス
+const imagePath = path.join(__dirname, 'images', 'your_image.jpg'); // 画像ファイルのパス // 画像ファイルのパス
 const csvPath = './dist/result.csv'; // 出力するCSVファイルのパス
 
 // 画像を解析する関数
